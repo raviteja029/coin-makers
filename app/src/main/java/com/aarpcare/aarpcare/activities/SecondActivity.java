@@ -3,6 +3,7 @@ package com.aarpcare.aarpcare.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.Toast;
 import com.aarpcare.aarpcare.R;
 import com.aarpcare.aarpcare.services.usbank.api_client.ApiClient;
@@ -38,27 +40,47 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        final WebView wv = (WebView) findViewById(R.id.webview01);
+
+
+        final Button buttonPay = (Button) findViewById(R.id.buttonPay);
+        buttonPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SecondActivity.this, SummaryActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        wv.loadUrl("file:///android_asset/currentmonth.html");
+        wv.setVisibility(View.VISIBLE);
+        buttonPay.setVisibility(View.VISIBLE);
+
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
 
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 
-                WebView wv = (WebView) findViewById(R.id.webview01);
 
                 switch (tab.getPosition()) {
                     case 0:
-                        Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
-                        wv.setVisibility(View.INVISIBLE);
+                        // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                        wv.loadUrl("file:///android_asset/currentmonth.html");
+                        wv.setVisibility(View.VISIBLE);
+                        buttonPay.setVisibility(View.VISIBLE);
                         getAccountDetailsAsync();
                         break;
                     case 1:
-                        Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
                         wv.setVisibility(View.INVISIBLE);
+                        buttonPay.setVisibility(View.INVISIBLE);
                         break;
                     case 2:
                         wv.loadUrl("file:///android_asset/tiles.html");
                         wv.setVisibility(View.VISIBLE);
+                        buttonPay.setVisibility(View.INVISIBLE);
                         break;
                 }
 
@@ -74,7 +96,6 @@ public class SecondActivity extends AppCompatActivity {
 
             }
         });
-
 
         mProgressView = findViewById(R.id.summary_progress);
 
