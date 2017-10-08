@@ -11,11 +11,15 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import rx.Observable;
 
 public interface IApiService {
 
-    @POST("/account/details")
+    @POST("account/details/")
     @FormUrlEncoded
     Call<AccountDetails> getAccountDetails(@Body GetAccountDetailsRequest getAccountDetailsRequest);
+
+    @POST("account/details/")
+    Observable<AccountDetails> getAccountDetailsAsync(@Body GetAccountDetailsRequest getAccountDetailsRequest);
 
 }

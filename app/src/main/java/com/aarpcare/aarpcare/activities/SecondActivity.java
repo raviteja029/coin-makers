@@ -8,18 +8,28 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 import com.aarpcare.aarpcare.R;
+import com.aarpcare.aarpcare.services.usbank.api_client.ApiClient;
+import com.aarpcare.aarpcare.services.usbank.api_request_models.GetAccountDetailsRequest;
+import com.aarpcare.aarpcare.services.usbank.interfaces.IApiService;
+import com.aarpcare.aarpcare.services.usbank.models.AccountDetails;
+
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 
 public class SecondActivity extends AppCompatActivity {
 
     private LetsGoTask mLetsGoTask = null;
     private View mProgressView;
-
     private String mRoleName = "caregiver";
+    private IApiService mAPIService;
+    private String TAG = "AARP_APP";
 
     // static TabHost mTabHost;
 
@@ -40,6 +50,7 @@ public class SecondActivity extends AppCompatActivity {
                     case 0:
                         Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
                         wv.setVisibility(View.INVISIBLE);
+                        getAccountDetailsAsync();
                         break;
                     case 1:
                         Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
@@ -67,6 +78,56 @@ public class SecondActivity extends AppCompatActivity {
 
         mProgressView = findViewById(R.id.summary_progress);
 
+    }
+
+    public void getAccountDetails() {
+
+        GetAccountDetailsRequest getAccountDetailsRequest = new GetAccountDetailsRequest();
+
+        getAccountDetailsRequest.setOperatingCompanyIdentifier("815");
+        getAccountDetailsRequest.setProductCode("DDA");
+        getAccountDetailsRequest.setPrimaryIdentifier("00000000000000822943114");
+
+
+       // mAPIService.getAccountDetails(getAccountDetailsRequest).execute(Call<Post>)  {
+
+
+    }
+
+
+    public void getAccountDetailsAsync(){
+
+        GetAccountDetailsRequest getAccountDetailsRequest = new GetAccountDetailsRequest();
+
+        getAccountDetailsRequest.setOperatingCompanyIdentifier("815");
+        getAccountDetailsRequest.setProductCode("DDA");
+        getAccountDetailsRequest.setPrimaryIdentifier("00000000000000822943114");
+        // RxJava
+        mAPIService = ApiClient.getAsyncAPIService();
+        mAPIService.getAccountDetailsAsync(getAccountDetailsRequest).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<AccountDetails>() {
+                    @Override
+                    public void onCompleted() {
+                        Log.d(TAG, "Completed");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d(TAG, e.toString());
+                    }
+
+                    @Override
+                    public void onNext(AccountDetails accountDetails) {
+                        Log.d(TAG, "onNext");
+                        showResponse(accountDetails.toString());
+                    }
+                });
+
+    }
+
+
+    public void showResponse(String response) {
+        Log.d(TAG, response);
     }
 
 

@@ -13,7 +13,10 @@ public class ApiClient {
     public static final String BASE_URL = "http://api119521live.gateway.akana.com/api/v1/";
 
     public static IApiService getAPIService() {
-
         return ApiRetrofitFactory.getClient(BASE_URL).create(IApiService.class);
+    }
+
+    public static IApiService getAsyncAPIService() {
+        return ApiRetrofitFactory.getAsyncClient(BASE_URL).create(IApiService.class);
     }
 }

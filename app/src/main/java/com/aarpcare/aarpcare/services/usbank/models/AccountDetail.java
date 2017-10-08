@@ -3,6 +3,7 @@ package com.aarpcare.aarpcare.services.usbank.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class AccountDetail {
 
@@ -174,12 +175,22 @@ public class AccountDetail {
         this.bankSpecific = bankSpecific;
     }
 
+    public AccountDetail withBankSpecific(BankSpecific bankSpecific) {
+        this.bankSpecific = bankSpecific;
+        return this;
+    }
+
     public OfficerAndProcessData getOfficerAndProcessData() {
         return officerAndProcessData;
     }
 
     public void setOfficerAndProcessData(OfficerAndProcessData officerAndProcessData) {
         this.officerAndProcessData = officerAndProcessData;
+    }
+
+    public AccountDetail withOfficerAndProcessData(OfficerAndProcessData officerAndProcessData) {
+        this.officerAndProcessData = officerAndProcessData;
+        return this;
     }
 
     public String getOverDraftProtectionTotalNumber() {
@@ -190,12 +201,22 @@ public class AccountDetail {
         this.overDraftProtectionTotalNumber = overDraftProtectionTotalNumber;
     }
 
+    public AccountDetail withOverDraftProtectionTotalNumber(String overDraftProtectionTotalNumber) {
+        this.overDraftProtectionTotalNumber = overDraftProtectionTotalNumber;
+        return this;
+    }
+
     public String getWithholdingDescription() {
         return withholdingDescription;
     }
 
     public void setWithholdingDescription(String withholdingDescription) {
         this.withholdingDescription = withholdingDescription;
+    }
+
+    public AccountDetail withWithholdingDescription(String withholdingDescription) {
+        this.withholdingDescription = withholdingDescription;
+        return this;
     }
 
     public String getNetInterestRateNumber() {
@@ -206,12 +227,22 @@ public class AccountDetail {
         this.netInterestRateNumber = netInterestRateNumber;
     }
 
+    public AccountDetail withNetInterestRateNumber(String netInterestRateNumber) {
+        this.netInterestRateNumber = netInterestRateNumber;
+        return this;
+    }
+
     public String getDDAFundedCode() {
         return dDAFundedCode;
     }
 
     public void setDDAFundedCode(String dDAFundedCode) {
         this.dDAFundedCode = dDAFundedCode;
+    }
+
+    public AccountDetail withDDAFundedCode(String dDAFundedCode) {
+        this.dDAFundedCode = dDAFundedCode;
+        return this;
     }
 
     public String getStatementTypeCode() {
@@ -222,12 +253,22 @@ public class AccountDetail {
         this.statementTypeCode = statementTypeCode;
     }
 
+    public AccountDetail withStatementTypeCode(String statementTypeCode) {
+        this.statementTypeCode = statementTypeCode;
+        return this;
+    }
+
     public String getBonusInterestRateNumber() {
         return bonusInterestRateNumber;
     }
 
     public void setBonusInterestRateNumber(String bonusInterestRateNumber) {
         this.bonusInterestRateNumber = bonusInterestRateNumber;
+    }
+
+    public AccountDetail withBonusInterestRateNumber(String bonusInterestRateNumber) {
+        this.bonusInterestRateNumber = bonusInterestRateNumber;
+        return this;
     }
 
     public String getUBankAtWorkCompanyIdentifier() {
@@ -238,12 +279,22 @@ public class AccountDetail {
         this.uBankAtWorkCompanyIdentifier = uBankAtWorkCompanyIdentifier;
     }
 
+    public AccountDetail withUBankAtWorkCompanyIdentifier(String uBankAtWorkCompanyIdentifier) {
+        this.uBankAtWorkCompanyIdentifier = uBankAtWorkCompanyIdentifier;
+        return this;
+    }
+
     public String getLineOfCreditDummyDDACode() {
         return lineOfCreditDummyDDACode;
     }
 
     public void setLineOfCreditDummyDDACode(String lineOfCreditDummyDDACode) {
         this.lineOfCreditDummyDDACode = lineOfCreditDummyDDACode;
+    }
+
+    public AccountDetail withLineOfCreditDummyDDACode(String lineOfCreditDummyDDACode) {
+        this.lineOfCreditDummyDDACode = lineOfCreditDummyDDACode;
+        return this;
     }
 
     public String getBalanceLevelNumber() {
@@ -254,12 +305,22 @@ public class AccountDetail {
         this.balanceLevelNumber = balanceLevelNumber;
     }
 
+    public AccountDetail withBalanceLevelNumber(String balanceLevelNumber) {
+        this.balanceLevelNumber = balanceLevelNumber;
+        return this;
+    }
+
     public String getOverdraftItemsInOTPNumber() {
         return overdraftItemsInOTPNumber;
     }
 
     public void setOverdraftItemsInOTPNumber(String overdraftItemsInOTPNumber) {
         this.overdraftItemsInOTPNumber = overdraftItemsInOTPNumber;
+    }
+
+    public AccountDetail withOverdraftItemsInOTPNumber(String overdraftItemsInOTPNumber) {
+        this.overdraftItemsInOTPNumber = overdraftItemsInOTPNumber;
+        return this;
     }
 
     public String getStatementGroupIdentifier() {
@@ -270,12 +331,22 @@ public class AccountDetail {
         this.statementGroupIdentifier = statementGroupIdentifier;
     }
 
+    public AccountDetail withStatementGroupIdentifier(String statementGroupIdentifier) {
+        this.statementGroupIdentifier = statementGroupIdentifier;
+        return this;
+    }
+
     public String getZeroBalanceMasterAccountNumber() {
         return zeroBalanceMasterAccountNumber;
     }
 
     public void setZeroBalanceMasterAccountNumber(String zeroBalanceMasterAccountNumber) {
         this.zeroBalanceMasterAccountNumber = zeroBalanceMasterAccountNumber;
+    }
+
+    public AccountDetail withZeroBalanceMasterAccountNumber(String zeroBalanceMasterAccountNumber) {
+        this.zeroBalanceMasterAccountNumber = zeroBalanceMasterAccountNumber;
+        return this;
     }
 
     public String getOverdraftCollectedBalanceToleranceAmount() {
@@ -286,12 +357,22 @@ public class AccountDetail {
         this.overdraftCollectedBalanceToleranceAmount = overdraftCollectedBalanceToleranceAmount;
     }
 
+    public AccountDetail withOverdraftCollectedBalanceToleranceAmount(String overdraftCollectedBalanceToleranceAmount) {
+        this.overdraftCollectedBalanceToleranceAmount = overdraftCollectedBalanceToleranceAmount;
+        return this;
+    }
+
     public String getOverdraftLedgerBalanceToleranceAmount() {
         return overdraftLedgerBalanceToleranceAmount;
     }
 
     public void setOverdraftLedgerBalanceToleranceAmount(String overdraftLedgerBalanceToleranceAmount) {
         this.overdraftLedgerBalanceToleranceAmount = overdraftLedgerBalanceToleranceAmount;
+    }
+
+    public AccountDetail withOverdraftLedgerBalanceToleranceAmount(String overdraftLedgerBalanceToleranceAmount) {
+        this.overdraftLedgerBalanceToleranceAmount = overdraftLedgerBalanceToleranceAmount;
+        return this;
     }
 
     public String getGenerateNonSufficientFundsOverdraftNoticeCode() {
@@ -302,12 +383,22 @@ public class AccountDetail {
         this.generateNonSufficientFundsOverdraftNoticeCode = generateNonSufficientFundsOverdraftNoticeCode;
     }
 
+    public AccountDetail withGenerateNonSufficientFundsOverdraftNoticeCode(String generateNonSufficientFundsOverdraftNoticeCode) {
+        this.generateNonSufficientFundsOverdraftNoticeCode = generateNonSufficientFundsOverdraftNoticeCode;
+        return this;
+    }
+
     public String getLanguageCode() {
         return languageCode;
     }
 
     public void setLanguageCode(String languageCode) {
         this.languageCode = languageCode;
+    }
+
+    public AccountDetail withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
     }
 
     public String getCalculatedInterestRateNumber() {
@@ -318,12 +409,22 @@ public class AccountDetail {
         this.calculatedInterestRateNumber = calculatedInterestRateNumber;
     }
 
+    public AccountDetail withCalculatedInterestRateNumber(String calculatedInterestRateNumber) {
+        this.calculatedInterestRateNumber = calculatedInterestRateNumber;
+        return this;
+    }
+
     public String getWithholdingCode() {
         return withholdingCode;
     }
 
     public void setWithholdingCode(String withholdingCode) {
         this.withholdingCode = withholdingCode;
+    }
+
+    public AccountDetail withWithholdingCode(String withholdingCode) {
+        this.withholdingCode = withholdingCode;
+        return this;
     }
 
     public String getCurrentYearInterestPaidAmount() {
@@ -334,12 +435,22 @@ public class AccountDetail {
         this.currentYearInterestPaidAmount = currentYearInterestPaidAmount;
     }
 
+    public AccountDetail withCurrentYearInterestPaidAmount(String currentYearInterestPaidAmount) {
+        this.currentYearInterestPaidAmount = currentYearInterestPaidAmount;
+        return this;
+    }
+
     public String getPriorYearInterestPaidAmount() {
         return priorYearInterestPaidAmount;
     }
 
     public void setPriorYearInterestPaidAmount(String priorYearInterestPaidAmount) {
         this.priorYearInterestPaidAmount = priorYearInterestPaidAmount;
+    }
+
+    public AccountDetail withPriorYearInterestPaidAmount(String priorYearInterestPaidAmount) {
+        this.priorYearInterestPaidAmount = priorYearInterestPaidAmount;
+        return this;
     }
 
     public String getPriorCycleInterestPaidAmount() {
@@ -350,12 +461,22 @@ public class AccountDetail {
         this.priorCycleInterestPaidAmount = priorCycleInterestPaidAmount;
     }
 
+    public AccountDetail withPriorCycleInterestPaidAmount(String priorCycleInterestPaidAmount) {
+        this.priorCycleInterestPaidAmount = priorCycleInterestPaidAmount;
+        return this;
+    }
+
     public String getAccountCloseReasonCode() {
         return accountCloseReasonCode;
     }
 
     public void setAccountCloseReasonCode(String accountCloseReasonCode) {
         this.accountCloseReasonCode = accountCloseReasonCode;
+    }
+
+    public AccountDetail withAccountCloseReasonCode(String accountCloseReasonCode) {
+        this.accountCloseReasonCode = accountCloseReasonCode;
+        return this;
     }
 
     public String getOverdraftItemsTodayNumber() {
@@ -366,12 +487,22 @@ public class AccountDetail {
         this.overdraftItemsTodayNumber = overdraftItemsTodayNumber;
     }
 
+    public AccountDetail withOverdraftItemsTodayNumber(String overdraftItemsTodayNumber) {
+        this.overdraftItemsTodayNumber = overdraftItemsTodayNumber;
+        return this;
+    }
+
     public String getReturnedChecksTodayNumber() {
         return returnedChecksTodayNumber;
     }
 
     public void setReturnedChecksTodayNumber(String returnedChecksTodayNumber) {
         this.returnedChecksTodayNumber = returnedChecksTodayNumber;
+    }
+
+    public AccountDetail withReturnedChecksTodayNumber(String returnedChecksTodayNumber) {
+        this.returnedChecksTodayNumber = returnedChecksTodayNumber;
+        return this;
     }
 
     public String getTimesOverdrawnCount() {
@@ -382,12 +513,22 @@ public class AccountDetail {
         this.timesOverdrawnCount = timesOverdrawnCount;
     }
 
+    public AccountDetail withTimesOverdrawnCount(String timesOverdrawnCount) {
+        this.timesOverdrawnCount = timesOverdrawnCount;
+        return this;
+    }
+
     public String getTimesNonSufficientFundsCount() {
         return timesNonSufficientFundsCount;
     }
 
     public void setTimesNonSufficientFundsCount(String timesNonSufficientFundsCount) {
         this.timesNonSufficientFundsCount = timesNonSufficientFundsCount;
+    }
+
+    public AccountDetail withTimesNonSufficientFundsCount(String timesNonSufficientFundsCount) {
+        this.timesNonSufficientFundsCount = timesNonSufficientFundsCount;
+        return this;
     }
 
     public String getReturnedCheckChargesWaivedAmount() {
@@ -398,12 +539,22 @@ public class AccountDetail {
         this.returnedCheckChargesWaivedAmount = returnedCheckChargesWaivedAmount;
     }
 
+    public AccountDetail withReturnedCheckChargesWaivedAmount(String returnedCheckChargesWaivedAmount) {
+        this.returnedCheckChargesWaivedAmount = returnedCheckChargesWaivedAmount;
+        return this;
+    }
+
     public String getOverdraftChargesWaivedAmount() {
         return overdraftChargesWaivedAmount;
     }
 
     public void setOverdraftChargesWaivedAmount(String overdraftChargesWaivedAmount) {
         this.overdraftChargesWaivedAmount = overdraftChargesWaivedAmount;
+    }
+
+    public AccountDetail withOverdraftChargesWaivedAmount(String overdraftChargesWaivedAmount) {
+        this.overdraftChargesWaivedAmount = overdraftChargesWaivedAmount;
+        return this;
     }
 
     public String getFundsOwnershipCode() {
@@ -414,12 +565,22 @@ public class AccountDetail {
         this.fundsOwnershipCode = fundsOwnershipCode;
     }
 
+    public AccountDetail withFundsOwnershipCode(String fundsOwnershipCode) {
+        this.fundsOwnershipCode = fundsOwnershipCode;
+        return this;
+    }
+
     public String getStatementCycleCode() {
         return statementCycleCode;
     }
 
     public void setStatementCycleCode(String statementCycleCode) {
         this.statementCycleCode = statementCycleCode;
+    }
+
+    public AccountDetail withStatementCycleCode(String statementCycleCode) {
+        this.statementCycleCode = statementCycleCode;
+        return this;
     }
 
     public String getLastDepositAmount() {
@@ -430,12 +591,22 @@ public class AccountDetail {
         this.lastDepositAmount = lastDepositAmount;
     }
 
+    public AccountDetail withLastDepositAmount(String lastDepositAmount) {
+        this.lastDepositAmount = lastDepositAmount;
+        return this;
+    }
+
     public String getACHCreditsNumber() {
         return aCHCreditsNumber;
     }
 
     public void setACHCreditsNumber(String aCHCreditsNumber) {
         this.aCHCreditsNumber = aCHCreditsNumber;
+    }
+
+    public AccountDetail withACHCreditsNumber(String aCHCreditsNumber) {
+        this.aCHCreditsNumber = aCHCreditsNumber;
+        return this;
     }
 
     public String getLastInterestPaymentDate() {
@@ -446,12 +617,22 @@ public class AccountDetail {
         this.lastInterestPaymentDate = lastInterestPaymentDate;
     }
 
+    public AccountDetail withLastInterestPaymentDate(String lastInterestPaymentDate) {
+        this.lastInterestPaymentDate = lastInterestPaymentDate;
+        return this;
+    }
+
     public String getCurrentCycleInterestAccruedAmount() {
         return currentCycleInterestAccruedAmount;
     }
 
     public void setCurrentCycleInterestAccruedAmount(String currentCycleInterestAccruedAmount) {
         this.currentCycleInterestAccruedAmount = currentCycleInterestAccruedAmount;
+    }
+
+    public AccountDetail withCurrentCycleInterestAccruedAmount(String currentCycleInterestAccruedAmount) {
+        this.currentCycleInterestAccruedAmount = currentCycleInterestAccruedAmount;
+        return this;
     }
 
     public String getBalanceLastStatementAmount() {
@@ -462,12 +643,22 @@ public class AccountDetail {
         this.balanceLastStatementAmount = balanceLastStatementAmount;
     }
 
+    public AccountDetail withBalanceLastStatementAmount(String balanceLastStatementAmount) {
+        this.balanceLastStatementAmount = balanceLastStatementAmount;
+        return this;
+    }
+
     public String getLastStatementDate() {
         return lastStatementDate;
     }
 
     public void setLastStatementDate(String lastStatementDate) {
         this.lastStatementDate = lastStatementDate;
+    }
+
+    public AccountDetail withLastStatementDate(String lastStatementDate) {
+        this.lastStatementDate = lastStatementDate;
+        return this;
     }
 
     public String getBonusInterestDataPresentCode() {
@@ -478,12 +669,22 @@ public class AccountDetail {
         this.bonusInterestDataPresentCode = bonusInterestDataPresentCode;
     }
 
+    public AccountDetail withBonusInterestDataPresentCode(String bonusInterestDataPresentCode) {
+        this.bonusInterestDataPresentCode = bonusInterestDataPresentCode;
+        return this;
+    }
+
     public String getEffectiveDatedOverdraftLimitsCode() {
         return effectiveDatedOverdraftLimitsCode;
     }
 
     public void setEffectiveDatedOverdraftLimitsCode(String effectiveDatedOverdraftLimitsCode) {
         this.effectiveDatedOverdraftLimitsCode = effectiveDatedOverdraftLimitsCode;
+    }
+
+    public AccountDetail withEffectiveDatedOverdraftLimitsCode(String effectiveDatedOverdraftLimitsCode) {
+        this.effectiveDatedOverdraftLimitsCode = effectiveDatedOverdraftLimitsCode;
+        return this;
     }
 
     public String getDailyBalanceSelectCode() {
@@ -494,12 +695,22 @@ public class AccountDetail {
         this.dailyBalanceSelectCode = dailyBalanceSelectCode;
     }
 
+    public AccountDetail withDailyBalanceSelectCode(String dailyBalanceSelectCode) {
+        this.dailyBalanceSelectCode = dailyBalanceSelectCode;
+        return this;
+    }
+
     public String getSignaturesRequiredNumber() {
         return signaturesRequiredNumber;
     }
 
     public void setSignaturesRequiredNumber(String signaturesRequiredNumber) {
         this.signaturesRequiredNumber = signaturesRequiredNumber;
+    }
+
+    public AccountDetail withSignaturesRequiredNumber(String signaturesRequiredNumber) {
+        this.signaturesRequiredNumber = signaturesRequiredNumber;
+        return this;
     }
 
     public String getSafeKeepingFlagCode() {
@@ -510,12 +721,22 @@ public class AccountDetail {
         this.safeKeepingFlagCode = safeKeepingFlagCode;
     }
 
+    public AccountDetail withSafeKeepingFlagCode(String safeKeepingFlagCode) {
+        this.safeKeepingFlagCode = safeKeepingFlagCode;
+        return this;
+    }
+
     public String getLargeItemMonitorCode() {
         return largeItemMonitorCode;
     }
 
     public void setLargeItemMonitorCode(String largeItemMonitorCode) {
         this.largeItemMonitorCode = largeItemMonitorCode;
+    }
+
+    public AccountDetail withLargeItemMonitorCode(String largeItemMonitorCode) {
+        this.largeItemMonitorCode = largeItemMonitorCode;
+        return this;
     }
 
     public String getSignificantBalanceChangeCode() {
@@ -526,12 +747,22 @@ public class AccountDetail {
         this.significantBalanceChangeCode = significantBalanceChangeCode;
     }
 
+    public AccountDetail withSignificantBalanceChangeCode(String significantBalanceChangeCode) {
+        this.significantBalanceChangeCode = significantBalanceChangeCode;
+        return this;
+    }
+
     public String getCreditLineAmount() {
         return creditLineAmount;
     }
 
     public void setCreditLineAmount(String creditLineAmount) {
         this.creditLineAmount = creditLineAmount;
+    }
+
+    public AccountDetail withCreditLineAmount(String creditLineAmount) {
+        this.creditLineAmount = creditLineAmount;
+        return this;
     }
 
     public USTaxIdentification getUSTaxIdentification() {
@@ -542,12 +773,22 @@ public class AccountDetail {
         this.uSTaxIdentification = uSTaxIdentification;
     }
 
+    public AccountDetail withUSTaxIdentification(USTaxIdentification uSTaxIdentification) {
+        this.uSTaxIdentification = uSTaxIdentification;
+        return this;
+    }
+
     public String getStatusDescription() {
         return statusDescription;
     }
 
     public void setStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
+    }
+
+    public AccountDetail withStatusDescription(String statusDescription) {
+        this.statusDescription = statusDescription;
+        return this;
     }
 
     public String getOfficerTelephoneNumber1() {
@@ -558,12 +799,22 @@ public class AccountDetail {
         this.officerTelephoneNumber1 = officerTelephoneNumber1;
     }
 
+    public AccountDetail withOfficerTelephoneNumber1(String officerTelephoneNumber1) {
+        this.officerTelephoneNumber1 = officerTelephoneNumber1;
+        return this;
+    }
+
     public String getOfficerName1() {
         return officerName1;
     }
 
     public void setOfficerName1(String officerName1) {
         this.officerName1 = officerName1;
+    }
+
+    public AccountDetail withOfficerName1(String officerName1) {
+        this.officerName1 = officerName1;
+        return this;
     }
 
     public String getOfficerCode1() {
@@ -574,6 +825,11 @@ public class AccountDetail {
         this.officerCode1 = officerCode1;
     }
 
+    public AccountDetail withOfficerCode1(String officerCode1) {
+        this.officerCode1 = officerCode1;
+        return this;
+    }
+
     public String getCostCenter() {
         return costCenter;
     }
@@ -582,12 +838,27 @@ public class AccountDetail {
         this.costCenter = costCenter;
     }
 
+    public AccountDetail withCostCenter(String costCenter) {
+        this.costCenter = costCenter;
+        return this;
+    }
+
     public Dates getDates() {
         return dates;
     }
 
     public void setDates(Dates dates) {
         this.dates = dates;
+    }
+
+    public AccountDetail withDates(Dates dates) {
+        this.dates = dates;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("bankSpecific", bankSpecific).append("officerAndProcessData", officerAndProcessData).append("overDraftProtectionTotalNumber", overDraftProtectionTotalNumber).append("withholdingDescription", withholdingDescription).append("netInterestRateNumber", netInterestRateNumber).append("dDAFundedCode", dDAFundedCode).append("statementTypeCode", statementTypeCode).append("bonusInterestRateNumber", bonusInterestRateNumber).append("uBankAtWorkCompanyIdentifier", uBankAtWorkCompanyIdentifier).append("lineOfCreditDummyDDACode", lineOfCreditDummyDDACode).append("balanceLevelNumber", balanceLevelNumber).append("overdraftItemsInOTPNumber", overdraftItemsInOTPNumber).append("statementGroupIdentifier", statementGroupIdentifier).append("zeroBalanceMasterAccountNumber", zeroBalanceMasterAccountNumber).append("overdraftCollectedBalanceToleranceAmount", overdraftCollectedBalanceToleranceAmount).append("overdraftLedgerBalanceToleranceAmount", overdraftLedgerBalanceToleranceAmount).append("generateNonSufficientFundsOverdraftNoticeCode", generateNonSufficientFundsOverdraftNoticeCode).append("languageCode", languageCode).append("calculatedInterestRateNumber", calculatedInterestRateNumber).append("withholdingCode", withholdingCode).append("currentYearInterestPaidAmount", currentYearInterestPaidAmount).append("priorYearInterestPaidAmount", priorYearInterestPaidAmount).append("priorCycleInterestPaidAmount", priorCycleInterestPaidAmount).append("accountCloseReasonCode", accountCloseReasonCode).append("overdraftItemsTodayNumber", overdraftItemsTodayNumber).append("returnedChecksTodayNumber", returnedChecksTodayNumber).append("timesOverdrawnCount", timesOverdrawnCount).append("timesNonSufficientFundsCount", timesNonSufficientFundsCount).append("returnedCheckChargesWaivedAmount", returnedCheckChargesWaivedAmount).append("overdraftChargesWaivedAmount", overdraftChargesWaivedAmount).append("fundsOwnershipCode", fundsOwnershipCode).append("statementCycleCode", statementCycleCode).append("lastDepositAmount", lastDepositAmount).append("aCHCreditsNumber", aCHCreditsNumber).append("lastInterestPaymentDate", lastInterestPaymentDate).append("currentCycleInterestAccruedAmount", currentCycleInterestAccruedAmount).append("balanceLastStatementAmount", balanceLastStatementAmount).append("lastStatementDate", lastStatementDate).append("bonusInterestDataPresentCode", bonusInterestDataPresentCode).append("effectiveDatedOverdraftLimitsCode", effectiveDatedOverdraftLimitsCode).append("dailyBalanceSelectCode", dailyBalanceSelectCode).append("signaturesRequiredNumber", signaturesRequiredNumber).append("safeKeepingFlagCode", safeKeepingFlagCode).append("largeItemMonitorCode", largeItemMonitorCode).append("significantBalanceChangeCode", significantBalanceChangeCode).append("creditLineAmount", creditLineAmount).append("uSTaxIdentification", uSTaxIdentification).append("statusDescription", statusDescription).append("officerTelephoneNumber1", officerTelephoneNumber1).append("officerName1", officerName1).append("officerCode1", officerCode1).append("costCenter", costCenter).append("dates", dates).toString();
     }
 
 }

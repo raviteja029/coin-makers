@@ -5,6 +5,7 @@ package com.aarpcare.aarpcare.services.usbank.api_client;
  */
 
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiRetrofitFactory {
@@ -20,4 +21,16 @@ public class ApiRetrofitFactory {
         }
         return retrofit;
     }
+
+    public static Retrofit getAsyncClient(String baseUrl) {
+        if (retrofit==null) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(baseUrl)
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
+
 }

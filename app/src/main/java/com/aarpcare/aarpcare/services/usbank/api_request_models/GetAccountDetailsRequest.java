@@ -4,6 +4,8 @@ package com.aarpcare.aarpcare.services.usbank.api_request_models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 public class GetAccountDetailsRequest {
 
     @SerializedName("OperatingCompanyIdentifier")
@@ -53,6 +55,11 @@ public class GetAccountDetailsRequest {
     public GetAccountDetailsRequest withPrimaryIdentifier(String primaryIdentifier) {
         this.primaryIdentifier = primaryIdentifier;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).append("operatingCompanyIdentifier", operatingCompanyIdentifier).append("productCode", productCode).append("primaryIdentifier", primaryIdentifier).toString();
     }
 
 }
