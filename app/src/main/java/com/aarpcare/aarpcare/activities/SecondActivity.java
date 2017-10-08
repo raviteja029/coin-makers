@@ -3,43 +3,96 @@ package com.aarpcare.aarpcare.activities;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.TabActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.aarpcare.aarpcare.R;
 
-public class FirstActivity extends AppCompatActivity {
+import static com.aarpcare.aarpcare.R.id.tabs;
+
+public class SecondActivity extends AppCompatActivity {
 
     private LetsGoTask mLetsGoTask = null;
     private View mProgressView;
-    private RadioGroup mRadioGroupOptions;
+
+    private String mRoleName = "caregiver";
+
+    // static TabHost mTabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_second);
 
-        Button mLetsGoButton = (Button) findViewById(R.id.letsGo);
-        mLetsGoButton.setOnClickListener(new View.OnClickListener() {
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+
+        tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                letsGo("careGiver");
+            public void onTabSelected(TabLayout.Tab tab) {
+                Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 
-        mProgressView = findViewById(R.id.welcome_progress);
+
+
+//
+//        mTabHost = getTabHost();
+//
+//
+//        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+//            @Override
+//            public void onTabChanged(String arg0) {
+//                Log.i("***Clickin Tab number ", "" + mTabHost.getCurrentTab());
+//            }
+//        });
+//
+//
+//        TabItem mTabItemAccountSummary = (TabItem) findViewById(R.id.tabAccountSummary);
+//        mTabItemAccountSummary.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                letsGo();
+//            }
+//        });
+
+        mProgressView = findViewById(R.id.summary_progress);
 
     }
 
-    private void letsGo(String roleName) {
+
+//
+//
+//
+//    public void onTabChanged(String tabId) {
+//        Log.d("LOG", "OnTabChanged");
+//    }
+
+    private void letsGo() {
         if (mLetsGoTask != null) {
             return;
         }
@@ -55,7 +108,7 @@ public class FirstActivity extends AppCompatActivity {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mLetsGoTask = new LetsGoTask(roleName);
+            mLetsGoTask = new LetsGoTask(mRoleName);
             mLetsGoTask.execute((Void) null);
         }
     }
@@ -92,7 +145,7 @@ public class FirstActivity extends AppCompatActivity {
             // The ViewPropertyAnimator APIs are not available, so simply show
             // and hide the relevant UI components.
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-           // mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
+            // mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
     }
 
@@ -131,8 +184,8 @@ public class FirstActivity extends AppCompatActivity {
             showProgress(false);
 
             if (success) {
-                Intent i = new Intent(FirstActivity.this, SecondActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(FirstActivity.this, SecondActivity.class);
+//                startActivity(i);
                 finish();
             } else {
 

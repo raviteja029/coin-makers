@@ -18,5 +18,6 @@
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
     <string name="title_activity_first">Welcome</string>
+    <string name="title_activity_second">Your Account</string>
 
 </resources>

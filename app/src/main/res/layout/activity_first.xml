@@ -5,6 +5,14 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <ProgressBar
+        android:id="@+id/welcome_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -14,19 +22,28 @@
         android:textSize="30sp"
         android:textStyle="bold" />
 
-    <RadioButton
-        android:id="@+id/radioCareGiver"
+    <RadioGroup
+        android:id="@+id/radioGroupOptions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Care Giver"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <RadioButton
-        android:id="@+id/radioBeneficier"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Beneficier"
-        android:textStyle="bold" />
+        <RadioButton
+            android:id="@+id/radioCareGiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Care Giver"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioBeneficier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beneficier"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+
 
     <Button
         android:id="@+id/letsGo"
