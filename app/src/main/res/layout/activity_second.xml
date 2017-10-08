@@ -19,19 +19,19 @@
             app:tabMode="scrollable">
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tab1"
+                android:id="@+id/tabAccountSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account Summry" />
+                android:text="Account Summary" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tab2"
+                android:id="@+id/tabTransactions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Transactions" />
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tab3"
+                android:id="@+id/tabNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notes" />

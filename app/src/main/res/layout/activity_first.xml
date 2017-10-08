@@ -15,21 +15,21 @@
         android:textStyle="bold" />
 
     <RadioButton
-        android:id="@+id/radioButton3"
+        android:id="@+id/radioCareGiver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Care Giver"
         android:textStyle="bold" />
 
     <RadioButton
-        android:id="@+id/radioButton4"
+        android:id="@+id/radioBeneficier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Beneficier"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/letsGo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lets Go" />
