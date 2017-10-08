@@ -14,4 +14,8 @@
         completions."
     </string>
 
+    <!-- workaround for id resource bug -->
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+
 </resources>
