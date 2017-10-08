@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -41,8 +42,45 @@ public class SecondActivity extends AppCompatActivity {
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(),
-                        Toast.LENGTH_SHORT).show();
+
+                WebView wv = (WebView) findViewById(R.id.webview01);
+
+                switch (tab.getPosition()) {
+                    case 0:
+                        Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                        wv.setVisibility(View.INVISIBLE);
+                        break;
+                    case 1:
+                        Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                        wv.setVisibility(View.INVISIBLE);
+                        break;
+                    case 2:
+
+
+
+                        final String mimeType = "text/html";
+                        final String encoding = "UTF-8";
+                        String html = "<br /><br />Read the handouts please for tomorrow.<br /><br /><!--homework help homework" +
+                                "help help with homework homework assignments elementary school high school middle school" +
+                                "// --><font color='#60c000' size='4'><strong>Please!</strong></font>" +
+                                "<img src='http://www.homeworknow.com/hwnow/upload/images/tn_star300.gif'  />";
+
+                       // wv.loadDataWithBaseURL("", html, mimeType, encoding, "");
+
+                        wv.loadUrl("file:///android_asset/tiles.html");
+
+                        wv.setVisibility(View.VISIBLE);
+
+                        break;
+
+
+                }
+
+
+
+
+
+
             }
 
             @Override
