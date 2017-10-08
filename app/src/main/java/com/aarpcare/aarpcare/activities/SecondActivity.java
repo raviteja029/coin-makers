@@ -19,10 +19,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.Toast;
-
 import com.aarpcare.aarpcare.R;
 
-import static com.aarpcare.aarpcare.R.id.tabs;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -59,38 +57,10 @@ public class SecondActivity extends AppCompatActivity {
         });
 
 
-
-//
-//        mTabHost = getTabHost();
-//
-//
-//        mTabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-//            @Override
-//            public void onTabChanged(String arg0) {
-//                Log.i("***Clickin Tab number ", "" + mTabHost.getCurrentTab());
-//            }
-//        });
-//
-//
-//        TabItem mTabItemAccountSummary = (TabItem) findViewById(R.id.tabAccountSummary);
-//        mTabItemAccountSummary.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                letsGo();
-//            }
-//        });
-
         mProgressView = findViewById(R.id.summary_progress);
 
     }
 
-
-//
-//
-//
-//    public void onTabChanged(String tabId) {
-//        Log.d("LOG", "OnTabChanged");
-//    }
 
     private void letsGo() {
         if (mLetsGoTask != null) {
