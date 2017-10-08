@@ -55,31 +55,10 @@ public class SecondActivity extends AppCompatActivity {
                         wv.setVisibility(View.INVISIBLE);
                         break;
                     case 2:
-
-
-
-                        final String mimeType = "text/html";
-                        final String encoding = "UTF-8";
-                        String html = "<br /><br />Read the handouts please for tomorrow.<br /><br /><!--homework help homework" +
-                                "help help with homework homework assignments elementary school high school middle school" +
-                                "// --><font color='#60c000' size='4'><strong>Please!</strong></font>" +
-                                "<img src='http://www.homeworknow.com/hwnow/upload/images/tn_star300.gif'  />";
-
-                       // wv.loadDataWithBaseURL("", html, mimeType, encoding, "");
-
                         wv.loadUrl("file:///android_asset/tiles.html");
-
                         wv.setVisibility(View.VISIBLE);
-
                         break;
-
-
                 }
-
-
-
-
-
 
             }
 
