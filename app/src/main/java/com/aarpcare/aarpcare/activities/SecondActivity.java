@@ -53,6 +53,9 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
+        wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        wv.getSettings().setAllowFileAccessFromFileURLs(true);
+        wv.getSettings().setJavaScriptEnabled(true);
         wv.loadUrl("file:///android_asset/currentmonth.html");
         wv.setVisibility(View.VISIBLE);
         buttonPay.setVisibility(View.VISIBLE);
@@ -67,6 +70,10 @@ public class SecondActivity extends AppCompatActivity {
                 switch (tab.getPosition()) {
                     case 0:
                         // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+                        wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
+                        wv.getSettings().setAllowFileAccessFromFileURLs(true);
+                        wv.getSettings().setJavaScriptEnabled(true);
+
                         wv.loadUrl("file:///android_asset/currentmonth.html");
                         wv.setVisibility(View.VISIBLE);
                         buttonPay.setVisibility(View.VISIBLE);
