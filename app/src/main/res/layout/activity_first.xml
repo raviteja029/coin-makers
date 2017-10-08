@@ -35,10 +35,10 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioBeneficier"
+            android:id="@+id/radioBeneficiary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Beneficier"
+            android:text="Beneficiary"
             android:textStyle="bold" />
 
     </RadioGroup>
