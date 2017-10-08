@@ -70,19 +70,23 @@ public class SecondActivity extends AppCompatActivity {
                 switch (tab.getPosition()) {
                     case 0:
                         // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
+
+                       // buttonPay.setVisibility(View.VISIBLE);
+                       // getAccountDetailsAsync();
+
+                        wv.setVisibility(View.INVISIBLE);
+                        buttonPay.setVisibility(View.INVISIBLE);
+                        break;
+                    case 1:
+                        // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
                         wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
                         wv.getSettings().setAllowFileAccessFromFileURLs(true);
                         wv.getSettings().setJavaScriptEnabled(true);
 
                         wv.loadUrl("file:///android_asset/currentmonth.html");
                         wv.setVisibility(View.VISIBLE);
-                        buttonPay.setVisibility(View.VISIBLE);
-                        getAccountDetailsAsync();
-                        break;
-                    case 1:
-                        // Toast.makeText(getApplicationContext(),"Tab " + tab.getPosition(), Toast.LENGTH_SHORT).show();
-                        wv.setVisibility(View.INVISIBLE);
-                        buttonPay.setVisibility(View.INVISIBLE);
+
+
                         break;
                     case 2:
                         wv.loadUrl("file:///android_asset/tiles.html");
