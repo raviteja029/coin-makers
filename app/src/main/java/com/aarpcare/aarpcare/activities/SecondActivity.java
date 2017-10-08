@@ -56,7 +56,7 @@ public class SecondActivity extends AppCompatActivity {
         wv.getSettings().setAllowUniversalAccessFromFileURLs(true);
         wv.getSettings().setAllowFileAccessFromFileURLs(true);
         wv.getSettings().setJavaScriptEnabled(true);
-        wv.loadUrl("file:///android_asset/currentmonth.html");
+        wv.loadUrl("file:///android_asset/trans.html");
         wv.setVisibility(View.VISIBLE);
         buttonPay.setVisibility(View.VISIBLE);
 
@@ -84,6 +84,7 @@ public class SecondActivity extends AppCompatActivity {
                         wv.getSettings().setJavaScriptEnabled(true);
 
                         wv.loadUrl("file:///android_asset/currentmonth.html");
+                        // wv.loadUrl("file:///android_asset/chat.html");
                         wv.setVisibility(View.VISIBLE);
 
 
